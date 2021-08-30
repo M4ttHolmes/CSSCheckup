@@ -1,0 +1,108 @@
+body {
+    background-color: rgb(174, 216, 243);
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    position: absolute;
+}
+
+.sky {
+    height: 30vh;
+    width: 100%;
+}
+
+.sun {
+    position: abosolute;
+    float: right;
+    background-color: yellow;
+    border: solid 3px orange;
+    border-radius: 15em;
+    width: 200px;
+    height: 200px;
+}
+
+.cloud{ 
+    position: relative;
+    margin-left: 600px;
+    top: 100px;
+    width: 350px;
+    height: 120px;
+    background: white;
+    border-radius: 100px;
+ }
+ .cloud::after, .cloud::before{
+     content:"";
+     position: relative;
+     display: inline-block;
+     background: inherit;
+     border-radius: inherit;
+ }
+ .cloud::after{
+     width: 100px;
+     height: 100px;
+     top: -120px;
+     left: -100px;
+ }
+ .cloud::before{
+     width: 180px;
+     height: 180px;
+     top: -70px;
+     left: 130px;
+ }
+
+.road {
+    position: relative;
+    background-color: black;
+    height: 130px;
+    width: 100%;
+}
+
+.ground {
+    background-color: green;
+    height: 20vh;
+    width: 100%;
+}
+
+.road-stripe {
+    background-color: white;
+    position: relative;
+    height: 3px;
+    width: 100%;
+}
+
+#top-stripe {
+    top: 5px;
+}
+
+#center-stripe {
+    top: 35%;
+    height: 5px;
+    background:
+      repeating-linear-gradient(to right,white 0,white 50px,transparent 50px,transparent 100px)
+}
+
+#bottom-stripe {
+    top: 115px;
+}
+
+.house {
+    position: relative;
+    left: 300px;
+    background-color: white;
+    border-style: solid;
+    border-width: 60px 100px 0px 100px;
+    border-color: darkred;
+    width: 75px;
+    height: 100px;
+    z-index: 1;
+}
+
+.roof {
+    position: relative; 
+    left: 240px;
+    width: 0;
+    height: 0;
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: 150px solid rgb(90, 55, 26);
+  }
